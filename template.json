@@ -1,4 +1,110 @@
 {
-    "Actor":{},
-    "Item":{}
-}
+    "Actor": {
+      "types": ["character", "npc", "vehicle"],
+      "templates": {
+        "humanOrAnimal": {
+          "health": {
+            "value": 10,
+            "min": 0,
+            "max": 80
+          },
+          "biography": ""
+        },
+        "vehicle": {
+          "health": {
+            "value": 10,
+            "min": 0,
+            "max": 500
+          },
+          "armor": {
+            "value": 5,
+            "min": 0,
+            "max": 20
+          },
+          "accelleration": {
+            "value": 5,
+            "min": 0,
+            "max": 100
+          },
+          "handling": {
+            "value": 5,
+            "min": 0,
+            "max": 100
+          },
+          "biography": ""
+        }
+      },
+      "character": {
+        "templates": ["humanOrAnimal"],
+        "attributes": {
+          "level": {
+            "value": 1
+          }
+        },
+        "abilities": {
+          "str": {
+            "value": 10
+          },
+          "dex": {
+            "value": 10
+          },
+          "con": {
+            "value": 10
+          },
+          "int": {
+            "value": 10
+          },
+          "cha": {
+            "value": 10
+          }
+        }
+      },
+      "npc": {
+        "templates": ["humanOrAnimal"],
+        "abilities": {
+            "str": {
+                "value": 10
+              },
+              "dex": {
+                "value": 10
+              },
+              "con": {
+                "value": 10
+              },
+              "int": {
+                "value": 10
+              },
+              "cha": {
+                "value": 10
+              }
+        }
+      },
+      "vehicle": {
+        "templates": ["vehicle"]
+      }
+    },
+    "Item": {
+      "types": ["item", "weapon", "equipment"],
+      "templates": {
+        "base": {
+          "description": ""
+        },
+        "explosive": {
+            "description": ""
+          }
+      },
+      "item": {
+        "templates": ["consumable", "throwable"],
+        "quantity": 1,
+        "weight": 0,
+        "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      },
+      "weapon": {
+        "templates": ["base"]
+      },
+      "spell": {
+        "templates": ["base"],
+        "spellLevel": 1
+      }
+    }
+  }

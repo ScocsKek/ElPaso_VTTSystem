@@ -1,22 +1,20 @@
 {
-    "name": "ElPaso_VTTSystem",
+    "id": "elpaso",
     "title": "El Paso",
-    "description": "A system for playing the El Paso campaign",
-    "author": "Sconcs",
-    "version": "0.1.01",
-    "minumCoreVersion": "11.315",
-    "compatibleCoreVersion": "11.315",
-    "esmodules": [
-        "elpaso.js"
+    "description": "The El Paso system for FoundryVTT!",
+    "authors": [
+      {
+        "name": "Sconcs"
+      }
     ],
-    "schema":[
-        "elpaso.css"
-    ],
-    "packs": [
-
-    ],
+    "compatibility": {
+        "minimum": 11,
+        "verified": "11.315"
+      },
+    "url": "https://github.com/ScocsKek/elpaso",
+    "readme": "README.md",
+    "version": "1.1.0",
     "gridDistance": 5,
     "gridUnits": "mtrs",
-    "primaryTokenAttribute": "HP",
-    "initiative": "1d6 + @speed"
+    "primaryTokenAttribute": "HP"
 }
