@@ -1,0 +1,22 @@
+{
+    "name": "ElPaso_VTTSystem",
+    "title": "El Paso",
+    "description": "A system for playing the El Paso campaign",
+    "author": "Sconcs",
+    "version": "0.1.01",
+    "minumCoreVersion": "11.315",
+    "compatibleCoreVersion": "11.315",
+    "esmodules": [
+        "elpaso.js"
+    ],
+    "schema":[
+        "elpaso.css"
+    ],
+    "packs": [
+
+    ],
+    "gridDistance": 5,
+    "gridUnits": "mtrs",
+    "primaryTokenAttribute": "HP",
+    "initiative": "1d6 + @speed"
+}
