@@ -8,6 +8,22 @@
             "min": 0,
             "max": 80
           },
+          "abilities": {
+            "str": {
+              "value": 10
+            },
+            "dex": {
+              "value": 10
+            },
+            "con": {
+              "value": 10
+            },
+            "int": {
+              "value": 10
+            },
+            "cha": {
+              "value": 10
+          },
           "biography": ""
         },
         "vehicle": {
@@ -40,44 +56,10 @@
           "level": {
             "value": 1
           }
-        },
-        "abilities": {
-          "str": {
-            "value": 10
-          },
-          "dex": {
-            "value": 10
-          },
-          "con": {
-            "value": 10
-          },
-          "int": {
-            "value": 10
-          },
-          "cha": {
-            "value": 10
-          }
         }
       },
       "npc": {
-        "templates": ["humanOrAnimal"],
-        "abilities": {
-            "str": {
-                "value": 10
-              },
-              "dex": {
-                "value": 10
-              },
-              "con": {
-                "value": 10
-              },
-              "int": {
-                "value": 10
-              },
-              "cha": {
-                "value": 10
-              }
-        }
+        "templates": ["humanOrAnimal"]
       },
       "vehicle": {
         "templates": ["vehicle"]
@@ -87,20 +69,73 @@
       "types": ["item", "weapon", "equipment"],
       "templates": {
         "base": {
+          "quantity": 0,
           "description": ""
         },
-        "explosive": {
-            "description": ""
-          }
+        "firearm": {
+          "damage": 0,
+          "penetration": 0
+        }
       },
       "item": {
-        "templates": ["consumable", "throwable"],
-        "quantity": 1,
-        "weight": 0,
-        "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+        "templates": {
+          "throwable": {
+            "doesDamage": false,
+            "doesStun": false,
+            "damage": 0,
+            "stunTurns": 0,
+            "radius": 0,
+            "description": "Anything throwable, from throwing knives to high explosive"
+          },
+          "consumable": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "additionalPenetration": 0,
+            "description": "First aid kits, bandages, ammo etc."
+          }
+        },
+        "quantity": 1
       },
       "weapon": {
-        "templates": ["base"]
+        "templates": {
+          "smallHandgun": {
+            "damage": 0,
+            "penetration": 0,
+            "description": "from 22 lr to 9x19 parabellum"
+          },
+          "heavyHandgun": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "description": ""
+          }
+          "consumable": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "description": ""
+          }
+          "consumable": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "description": ""
+          }
+          "consumable": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "description": ""
+          }
+          "consumable": {
+            "doesHeal": false,
+            "removeBleeding": false,
+            "healAmount": 0,
+            "description": ""
+          }
+        },
+        "quantity": 0
       },
       "spell": {
         "templates": ["base"],
